@@ -27364,16 +27364,16 @@
 	var Examples = function Examples(props) {
 		return React.createElement(
 			'div',
-			{ className: 'text-center' },
+			null,
 			React.createElement(
 				'h1',
-				null,
+				{ className: 'text-center' },
 				'Examples'
 			),
 			React.createElement(
 				'p',
 				null,
-				'Here are some example cities to try out:'
+				'Here are some example cities to try out!'
 			),
 			React.createElement(
 				'ol',
