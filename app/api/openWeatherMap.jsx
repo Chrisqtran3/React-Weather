@@ -18,8 +18,9 @@ module.exports = {
 					condition: res.data.weather[0].main
 				};
 			}
-		}, function(res) {
-			throw new Error(res.data.message);
+		}, function(err) {
+			//throw new Error(res.data.message);
+			throw new Error('City not found');
 		});
 	}
 }
