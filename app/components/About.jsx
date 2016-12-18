@@ -3,7 +3,7 @@ const React = require('react');
 let About = (props) => {
 	return (
 		<div>
-			<h3 className="text-center">About</h3>
+			<h1 className="text-center page-title">About</h1>
 			<p>
 				This is weather application, built using React.js, that allows you to search the weather of a specific 
 				city.
