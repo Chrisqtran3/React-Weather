@@ -1,10 +1,15 @@
 const React = require('react');
 
 let WeatherMessage = (props) => {
-	let {temp, location} = props;
+	let {temp, location, country, condition} = props;
 
 	return (
-		<h3 className="text-center">It is {Math.round(temp)} degrees in {location}.</h3>
+		<div className="block">
+			<h4>It is {Math.round(temp)} degrees in {location}, {country}.</h4>
+			<div>
+				<h4>Current Weather Condition: {condition}</h4>
+			</div>
+		</div>
 	);
 
 }

@@ -25623,10 +25623,12 @@
 				isLoading: true
 			});
 
-			openWeatherMap.getTemp(location).then(function (temp) {
+			openWeatherMap.getData(location).then(function (data) {
 				that.setState({
 					location: location,
-					temp: temp,
+					temp: data.temp,
+					country: data.country,
+					condition: data.condition,
 					isLoading: false
 				});
 			}, function (errorMessage) {
@@ -25641,7 +25643,9 @@
 			var _state = this.state,
 			    isLoading = _state.isLoading,
 			    temp = _state.temp,
-			    location = _state.location;
+			    location = _state.location,
+			    country = _state.country,
+			    condition = _state.condition;
 
 
 			function renderMessage() {
@@ -25652,7 +25656,7 @@
 						'Fetching weather...'
 					);
 				} else if (temp && location) {
-					return React.createElement(WeatherMessage, { temp: temp, location: location });
+					return React.createElement(WeatherMessage, { temp: temp, location: location, country: country, condition: condition });
 				}
 			}
 
@@ -25723,17 +25727,35 @@
 
 	var WeatherMessage = function WeatherMessage(props) {
 		var temp = props.temp,
-		    location = props.location;
+		    location = props.location,
+		    country = props.country,
+		    condition = props.condition;
 
 
 		return React.createElement(
-			"h3",
-			{ className: "text-center" },
-			"It is ",
-			Math.round(temp),
-			" degrees in ",
-			location,
-			"."
+			"div",
+			{ className: "block" },
+			React.createElement(
+				"h4",
+				null,
+				"It is ",
+				Math.round(temp),
+				" degrees in ",
+				location,
+				", ",
+				country,
+				"."
+			),
+			React.createElement(
+				"div",
+				null,
+				React.createElement(
+					"h4",
+					null,
+					"Current Weather Condition: ",
+					condition
+				)
+			)
 		);
 	};
 
@@ -25750,7 +25772,7 @@
 	var OPEN_WEATHER_MAP_URL = 'http://api.openweathermap.org/data/2.5/weather?appid=05a1f6eae3f40b3064288d2d11fc3a95&units=imperial';
 
 	module.exports = {
-		getTemp: function getTemp(location) {
+		getData: function getData(location) {
 			var encodedLocation = encodeURIComponent(location);
 			var requestUrl = OPEN_WEATHER_MAP_URL + '&q=' + encodedLocation;
 
@@ -25758,7 +25780,11 @@
 				if (res.data.cod && res.data.message) {
 					throw new Error(res.data.message);
 				} else {
-					return res.data.main.temp;
+					return {
+						temp: res.data.main.temp,
+						country: res.data.sys.country,
+						condition: res.data.weather[0].main
+					};
 				}
 			}, function (res) {
 				throw new Error(res.data.message);
