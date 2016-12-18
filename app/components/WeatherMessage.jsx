@@ -4,7 +4,7 @@ let WeatherMessage = (props) => {
 	let {temp, location} = props;
 
 	return (
-		<h2>It is {Math.round(temp)} degrees in {location}.</h2>
+		<h3 className="text-center">It is {Math.round(temp)} degrees in {location}.</h3>
 	);
 
 }
