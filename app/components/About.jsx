@@ -5,22 +5,22 @@ let About = (props) => {
 		<div>
 			<h1 className="text-center page-title">About</h1>
 			<p>
-				This is weather application, built using React.js, that allows you to search the weather of a specific 
+				This is a weather application, built using React.js, that allows you to search the weather of a specific 
 				city.
 			</p>
 
-			<p>Technologies Used:</p>
+			<p><u>Technologies Used</u>:</p>
 			<ul>
 				<li>React with Webpack</li>
 				<li>Foundation CSS framework</li>
 				<li>Axios</li>
 			</ul>
 
-			<p>Links:</p>
+			<p><u>Documentation</u>:</p>
 			<ul>
 				<li><a href="https://facebook.github.io/react/">React</a></li>
 				<li><a href="http://openweathermap.org/api">Open Weather API</a></li>
-				<li><a href="http://foundation.zurb.com/sites/docs/">Foundation Documentation</a></li>
+				<li><a href="http://foundation.zurb.com/sites/docs/">Foundation</a></li>
 			</ul>
 		</div>
 	);
