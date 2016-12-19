@@ -27966,7 +27966,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\ninput[type=search] {\n  box-shadow: none; }\n\n/*body {\n\tbackground: url(\"https://images.unsplash.com/photo-1445357715217-0b01ff0a17cf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=809d5e1bd24af52e6afc49dc869f2cbd\");\n  \tbackground-size: cover;\n  \tbackground-attachment: fixed;\n}\n\n.block {\n  background-color: black;\n  opacity: .8;\n  padding: 10px;\n  width: 50%;\n  margin-right: auto;\n  margin-left: auto;\n  border-radius: 10px;\n  color: white;\n}*/\n", ""]);
+	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\ninput[type=search] {\n  box-shadow: none; }\n\nbody {\n  background: url(\"http://www.chart-house.com/locations/san-francisco/img/overview/golden-gate-bridge.jpg\");\n  background-size: cover;\n  background-attachment: fixed;\n  color: white; }\n\n.block {\n  background-color: black;\n  width: 75%;\n  margin-right: auto;\n  margin-left: auto;\n  opacity: .9;\n  border-radius: 10px;\n  padding: 10px; }\n", ""]);
 
 	// exports
 

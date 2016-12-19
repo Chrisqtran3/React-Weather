@@ -9,19 +9,31 @@ input[type=search] {
 	box-shadow: none;
 }
 
-/*body {
-	background: url("https://images.unsplash.com/photo-1445357715217-0b01ff0a17cf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=809d5e1bd24af52e6afc49dc869f2cbd");
-  	background-size: cover;
-  	background-attachment: fixed;
+body {
+	background: url("http://www.chart-house.com/locations/san-francisco/img/overview/golden-gate-bridge.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
 }
+
+// .block {
+//   background-color: black;
+//   width: 50%;
+//   border-radius: 10px;
+//   opacity: .9;
+//   padding: 10px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding: 10px;
+//   margin-top: 27.5px;
+// }
 
 .block {
   background-color: black;
-  opacity: .8;
-  padding: 10px;
-  width: 50%;
+  width: 75%;
   margin-right: auto;
   margin-left: auto;
+  opacity: .9;
   border-radius: 10px;
-  color: white;
-}*/
+  padding: 10px;
+}
