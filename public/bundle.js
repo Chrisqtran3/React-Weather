@@ -25530,7 +25530,13 @@
 		onSearch: function onSearch(e) {
 			e.preventDefault();
 
-			alert('Not yet wired');
+			var location = this.refs.location.value;
+			var encodedLocation = encodeURIComponent(location);
+
+			if (location.length > 0) {
+				this.refs.location.value = '';
+				window.location.hash = '#/?location=' + encodedLocation;
+			}
 		},
 		render: function render() {
 			return React.createElement(
@@ -25588,7 +25594,7 @@
 							React.createElement(
 								'li',
 								null,
-								React.createElement('input', { type: 'search', placeholder: 'Search weather by city' })
+								React.createElement('input', { type: 'search', ref: 'location', placeholder: 'Search weather by city' })
 							),
 							React.createElement(
 								'li',
@@ -25629,7 +25635,11 @@
 
 			this.setState({
 				isLoading: true,
-				errorMessage: undefined
+				errorMessage: undefined,
+				location: undefined,
+				temp: undefined,
+				country: undefined,
+				condition: undefined
 			});
 
 			openWeatherMap.getData(location).then(function (data) {
@@ -25646,6 +25656,22 @@
 					errorMessage: e.message
 				});
 			});
+		},
+		componentDidMount: function componentDidMount() {
+			var location = this.props.location.query.location;
+
+			if (location && location.length > 0) {
+				this.handleSearch(location);
+				window.location.hash = '#/';
+			}
+		},
+		componentWillReceiveProps: function componentWillReceiveProps(newProps) {
+			var location = newProps.location.query.location;
+
+			if (location && location.length > 0) {
+				this.handleSearch(location);
+				window.location.hash = '#/';
+			}
 		},
 		render: function render() {
 			var _state = this.state,
@@ -27377,12 +27403,17 @@
 			React.createElement(
 				"p",
 				null,
-				"This is weather application, built using React.js, that allows you to search the weather of a specific city."
+				"This is a weather application, built using React.js, that allows you to search the weather of a specific city."
 			),
 			React.createElement(
 				"p",
 				null,
-				"Technologies Used:"
+				React.createElement(
+					"u",
+					null,
+					"Technologies Used"
+				),
+				":"
 			),
 			React.createElement(
 				"ul",
@@ -27406,7 +27437,12 @@
 			React.createElement(
 				"p",
 				null,
-				"Links:"
+				React.createElement(
+					"u",
+					null,
+					"Documentation"
+				),
+				":"
 			),
 			React.createElement(
 				"ul",
@@ -27435,7 +27471,7 @@
 					React.createElement(
 						"a",
 						{ href: "http://foundation.zurb.com/sites/docs/" },
-						"Foundation Documentation"
+						"Foundation"
 					)
 				)
 			)
@@ -27477,8 +27513,8 @@
 					null,
 					React.createElement(
 						Link,
-						{ to: '/?location=Philadelphia' },
-						'Philadelphia, PA'
+						{ to: '/?location=New%20York%20City' },
+						'New York City, New York'
 					)
 				),
 				React.createElement(
@@ -27487,7 +27523,16 @@
 					React.createElement(
 						Link,
 						{ to: '/?location=Paris' },
-						'Paris, FRA'
+						'Paris, France'
+					)
+				),
+				React.createElement(
+					'li',
+					null,
+					React.createElement(
+						Link,
+						{ to: '/?location=Tokyo' },
+						'Tokyo, Japan'
 					)
 				)
 			)
