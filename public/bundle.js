@@ -25496,11 +25496,15 @@
 			React.createElement(Nav, null),
 			React.createElement(
 				'div',
-				{ className: 'row' },
+				{ className: 'block' },
 				React.createElement(
 					'div',
-					{ className: 'columns medium-6 large-4 small-centered' },
-					props.children
+					{ className: 'row' },
+					React.createElement(
+						'div',
+						{ className: 'columns medium-6 large-4 small-centered' },
+						props.children
+					)
 				)
 			)
 		);
@@ -25719,7 +25723,7 @@
 					React.createElement('input', { type: 'search', ref: 'location', placeholder: 'Search weather by city' }),
 					React.createElement(
 						'button',
-						{ className: 'button expanded hollow' },
+						{ className: 'button expanded' },
 						'Get Weather'
 					)
 				)
@@ -27858,8 +27862,8 @@
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!./../../node_modules/css-loader/index.js!./app.css", function() {
-				var newContent = require("!!./../../node_modules/css-loader/index.js!./app.css");
+			module.hot.accept("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./app.scss", function() {
+				var newContent = require("!!./../../node_modules/css-loader/index.js!./../../node_modules/sass-loader/index.js!./app.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
@@ -27877,7 +27881,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title {\n\tmargin-top: 2.5rem;\n\tmargin-bottom: 2.5rem;\n}\n\ninput[type=search] {\n\tbox-shadow: none;\n}\n", ""]);
+	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\ninput[type=search] {\n  box-shadow: none; }\n\n/*body {\n\tbackground: url(\"https://images.unsplash.com/photo-1445357715217-0b01ff0a17cf?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&s=809d5e1bd24af52e6afc49dc869f2cbd\");\n  \tbackground-size: cover;\n  \tbackground-attachment: fixed;\n}\n\n.block {\n  background-color: black;\n  opacity: .8;\n  padding: 10px;\n  width: 50%;\n  margin-right: auto;\n  margin-left: auto;\n  border-radius: 10px;\n  color: white;\n}*/\n", ""]);
 
 	// exports
 
