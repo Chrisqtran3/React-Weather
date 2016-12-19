@@ -14,6 +14,7 @@ let About = (props) => {
 				<li>React with Webpack</li>
 				<li>Foundation CSS framework</li>
 				<li>Axios</li>
+				<li>Sass</li>
 			</ul>
 
 			<p><u>Documentation</u>:</p>
@@ -21,6 +22,7 @@ let About = (props) => {
 				<li><a href="https://facebook.github.io/react/">React</a></li>
 				<li><a href="http://openweathermap.org/api">Open Weather API</a></li>
 				<li><a href="http://foundation.zurb.com/sites/docs/">Foundation</a></li>
+				<li><a href="http://sass-lang.com/">Sass</a></li>
 			</ul>
 		</div>
 	);
