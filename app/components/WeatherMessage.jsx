@@ -5,9 +5,9 @@ let WeatherMessage = (props) => {
 
 	return (
 		<div className="block">
-			<h4>It is {Math.round(temp)} degrees in {location}, {country}.</h4>
+			<h4>It is <b>{Math.round(temp)} &#8457;</b> in {location}, {country}.</h4>
 			<div>
-				<h4>Current Weather Condition: {condition}</h4>
+				<h4>Current Weather Condition: <b>{condition}</b></h4>
 			</div>
 		</div>
 	);
