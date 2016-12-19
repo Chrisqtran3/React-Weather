@@ -27966,7 +27966,7 @@
 
 
 	// module
-	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\ninput[type=search] {\n  box-shadow: none; }\n\nbody {\n  background: url(\"http://www.chart-house.com/locations/san-francisco/img/overview/golden-gate-bridge.jpg\");\n  background-size: cover;\n  background-attachment: fixed;\n  color: white; }\n\n.block {\n  background-color: black;\n  width: 75%;\n  margin-right: auto;\n  margin-left: auto;\n  opacity: .9;\n  border-radius: 10px;\n  padding: 10px; }\n", ""]);
+	exports.push([module.id, ".page-title {\n  margin-top: 2.5rem;\n  margin-bottom: 2.5rem; }\n\ninput[type=search] {\n  box-shadow: none; }\n\nbody {\n  background-color: #000;\n  background-image: url(\"http://www.chart-house.com/locations/san-francisco/img/overview/golden-gate-bridge.jpg\");\n  background-repeat: no-repeat;\n  background-position: center;\n  background-attachment: fixed;\n  webkit-background-size: cover;\n  -moz-background-size: cover;\n  -o-background-size: cover;\n  background-size: cover;\n  color: white; }\n\n.block {\n  background-color: black;\n  width: 75%;\n  margin-right: auto;\n  margin-left: auto;\n  opacity: .9;\n  border-radius: 10px;\n  padding: 10px; }\n", ""]);
 
 	// exports
 
