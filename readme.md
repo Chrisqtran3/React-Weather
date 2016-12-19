@@ -1,0 +1,1 @@
+A simple weather application created using React along with other technologies like Axios, Foundation, and Sass.
