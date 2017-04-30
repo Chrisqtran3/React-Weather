@@ -94,19 +94,33 @@
 
 	/* WEBPACK VAR INJECTION */(function($) {'use strict';
 
-	var React = __webpack_require__(8);
-	var ReactDOM = __webpack_require__(165);
+	var _react = __webpack_require__(8);
 
-	var _require = __webpack_require__(166),
-	    Route = _require.Route,
-	    Router = _require.Router,
-	    IndexRoute = _require.IndexRoute,
-	    hashHistory = _require.hashHistory;
+	var _react2 = _interopRequireDefault(_react);
 
-	var Main = __webpack_require__(229);
-	var Weather = __webpack_require__(231);
-	var About = __webpack_require__(262);
-	var Examples = __webpack_require__(263);
+	var _reactDom = __webpack_require__(165);
+
+	var _reactDom2 = _interopRequireDefault(_reactDom);
+
+	var _reactRouter = __webpack_require__(166);
+
+	var _Main = __webpack_require__(229);
+
+	var _Main2 = _interopRequireDefault(_Main);
+
+	var _Weather = __webpack_require__(231);
+
+	var _Weather2 = _interopRequireDefault(_Weather);
+
+	var _About = __webpack_require__(262);
+
+	var _About2 = _interopRequireDefault(_About);
+
+	var _Examples = __webpack_require__(263);
+
+	var _Examples2 = _interopRequireDefault(_Examples);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// Load foundation
 	__webpack_require__(264);
@@ -115,15 +129,15 @@
 	// App css
 	__webpack_require__(268);
 
-	ReactDOM.render(React.createElement(
-		Router,
-		{ history: hashHistory },
-		React.createElement(
-			Route,
-			{ path: '/', component: Main },
-			React.createElement(Route, { path: 'about', component: About }),
-			React.createElement(Route, { path: 'examples', component: Examples }),
-			React.createElement(IndexRoute, { component: Weather })
+	_reactDom2.default.render(_react2.default.createElement(
+		_reactRouter.Router,
+		{ history: _reactRouter.hashHistory },
+		_react2.default.createElement(
+			_reactRouter.Route,
+			{ path: '/', component: _Main2.default },
+			_react2.default.createElement(_reactRouter.Route, { path: 'about', component: _About2.default }),
+			_react2.default.createElement(_reactRouter.Route, { path: 'examples', component: _Examples2.default }),
+			_react2.default.createElement(_reactRouter.IndexRoute, { component: _Weather2.default })
 		)
 	), document.getElementById('app'));
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
@@ -27415,100 +27429,108 @@
 
 	"use strict";
 
-	var React = __webpack_require__(8);
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
 
-	var About = function About(props) {
-		return React.createElement(
+	var _react = __webpack_require__(8);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var About = function About() {
+		return _react2.default.createElement(
 			"div",
 			null,
-			React.createElement(
+			_react2.default.createElement(
 				"h1",
 				{ className: "text-center page-title" },
 				"About"
 			),
-			React.createElement(
+			_react2.default.createElement(
 				"p",
 				null,
 				"This is a weather application, built using React.js, that allows you to search the weather of a specific city."
 			),
-			React.createElement(
+			_react2.default.createElement(
 				"p",
 				null,
-				React.createElement(
+				_react2.default.createElement(
 					"u",
 					null,
 					"Technologies Used"
 				),
 				":"
 			),
-			React.createElement(
+			_react2.default.createElement(
 				"ul",
 				null,
-				React.createElement(
+				_react2.default.createElement(
 					"li",
 					null,
 					"React with Webpack"
 				),
-				React.createElement(
+				_react2.default.createElement(
 					"li",
 					null,
 					"Foundation CSS framework"
 				),
-				React.createElement(
+				_react2.default.createElement(
 					"li",
 					null,
 					"Axios"
 				),
-				React.createElement(
+				_react2.default.createElement(
 					"li",
 					null,
 					"Sass"
 				)
 			),
-			React.createElement(
+			_react2.default.createElement(
 				"p",
 				null,
-				React.createElement(
+				_react2.default.createElement(
 					"u",
 					null,
 					"Documentation"
 				),
 				":"
 			),
-			React.createElement(
+			_react2.default.createElement(
 				"ul",
 				null,
-				React.createElement(
+				_react2.default.createElement(
 					"li",
 					null,
-					React.createElement(
+					_react2.default.createElement(
 						"a",
 						{ href: "https://facebook.github.io/react/" },
 						"React"
 					)
 				),
-				React.createElement(
+				_react2.default.createElement(
 					"li",
 					null,
-					React.createElement(
+					_react2.default.createElement(
 						"a",
 						{ href: "http://openweathermap.org/api" },
 						"Open Weather API"
 					)
 				),
-				React.createElement(
+				_react2.default.createElement(
 					"li",
 					null,
-					React.createElement(
+					_react2.default.createElement(
 						"a",
 						{ href: "http://foundation.zurb.com/sites/docs/" },
 						"Foundation"
 					)
 				),
-				React.createElement(
+				_react2.default.createElement(
 					"li",
 					null,
-					React.createElement(
+					_react2.default.createElement(
 						"a",
 						{ href: "http://sass-lang.com/" },
 						"Sass"
@@ -27518,7 +27540,7 @@
 		);
 	};
 
-	module.exports = About;
+	exports.default = About;
 
 /***/ },
 /* 263 */

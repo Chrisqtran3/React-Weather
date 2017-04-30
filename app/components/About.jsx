@@ -1,11 +1,11 @@
-const React = require('react');
+import React from 'react';
 
-let About = (props) => {
+const About = () => {
 	return (
 		<div>
 			<h1 className="text-center page-title">About</h1>
 			<p>
-				This is a weather application, built using React.js, that allows you to search the weather of a specific 
+				This is a weather application, built using React.js, that allows you to search the weather of a specific
 				city.
 			</p>
 
@@ -28,4 +28,4 @@ let About = (props) => {
 	);
 }
 
-module.exports = About;
+export default About;
