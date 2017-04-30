@@ -1,10 +1,10 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const { Route, Router, IndexRoute, hashHistory } = require('react-router'); 
-let Main = require('Main');
-let Weather = require('Weather');
-let About = require('About');
-let Examples = require('Examples');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Route, Router, IndexRoute, hashHistory } from 'react-router';
+import Main from 'Main';
+import Weather from 'Weather';
+import About from 'About';
+import Examples from 'Examples';
 
 // Load foundation
 require('style!css!foundation-sites/dist/foundation.min.css');
