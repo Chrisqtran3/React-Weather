@@ -1,7 +1,7 @@
-const React = require('react');
-let {Link} = require('react-router');
+import React from 'react';
+import { Link } from 'react-router';
 
-let Examples = (props) => {
+let Examples = () => {
 	return (
 		<div>
 			<h1 className="text-center page-title">Examples</h1>
@@ -11,7 +11,7 @@ let Examples = (props) => {
 					<Link to="/?location=New%20York%20City">New York City, New York</Link>
 				</li>
 				<li>
-					<Link to='/?location=Paris'>Paris, France</Link>	
+					<Link to='/?location=Paris'>Paris, France</Link>
 				</li>
 				<li>
 					<Link to="/?location=Tokyo">Tokyo, Japan</Link>
@@ -21,4 +21,4 @@ let Examples = (props) => {
 	);
 }
 
-module.exports = Examples;
+export default Examples;

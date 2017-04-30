@@ -1,18 +1,10 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const ReactDOMServer = require('react-dom/server');
+import React, { Component, PropTypes } from 'react';
+import ReactDOM from 'react-dom';
+import ReactDOMServer from 'react-dom/server';
 
-let ErrorModal = React.createClass({
-	getDefaultProps: function() {
-		return {
-			title: 'Error'
-		};
-	},
-	propTypes: {
-		title: React.PropTypes.string,
-		message: React.PropTypes.string.isRequired
-	},
-	componentDidMount: function() {
+class ErrorModal extends Component {
+
+	componentDidMount() {
 		let {title, message} = this.props;
 
 		let modalMarkup = (
@@ -30,13 +22,22 @@ let ErrorModal = React.createClass({
 
 		let modal = new Foundation.Reveal($('#error-modal'));
 		modal.open();
-	},
-	render: function() {
+	}
 
+	render() {
 		return(
 			<div></div>
 		);
 	}
-});
+}
 
-module.exports = ErrorModal;
+ErrorModal.defaultProps = {
+	title: 'Error'
+}
+
+ErrorModal.propTypes = {
+	title: PropTypes.string,
+	message: PropTypes.string.isRequired
+}
+
+export default ErrorModal;

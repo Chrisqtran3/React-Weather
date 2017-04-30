@@ -1,6 +1,6 @@
-const React = require('react');
+import React from 'react';
 
-let WeatherMessage = (props) => {
+const WeatherMessage = (props) => {
 	let {temp, location, country, condition} = props;
 
 	return (
@@ -14,4 +14,4 @@ let WeatherMessage = (props) => {
 
 }
 
-module.exports = WeatherMessage;
+export default WeatherMessage;

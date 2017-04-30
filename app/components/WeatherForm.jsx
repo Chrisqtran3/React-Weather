@@ -1,7 +1,14 @@
-const React = require('react');
+import React, { Component } from 'react';
 
-let WeatherForm = React.createClass({
-	onFormSubmit: function(e) {
+class WeatherForm extends Component {
+
+	constructor(props) {
+		super(props)
+
+		this.onFormSubmit = this.onFormSubmit.bind(this);
+	}
+
+	onFormSubmit(e) {
 		e.preventDefault();
 
 		let location = this.refs.location.value;
@@ -10,8 +17,9 @@ let WeatherForm = React.createClass({
 			this.refs.location.value = '';
 			this.props.onSearch(location);
 		}
-	},
-	render: function() {
+	}
+
+	render() {
 		return (
 			<div>
 				<form onSubmit={this.onFormSubmit}>
@@ -21,6 +29,6 @@ let WeatherForm = React.createClass({
 			</div>
 		);
 	}
-});
+}
 
-module.exports = WeatherForm;
+export default WeatherForm;
